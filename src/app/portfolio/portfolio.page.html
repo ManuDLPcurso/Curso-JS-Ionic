@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>portfolio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Portfolio</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <ion-list>
+    <ion-item *ngFor="let proyecto of proyectos" >
+      <ion-label>
+        <h2 id="resaltado">{{proyecto.nombre}}</h2>
+        <p id="sub">{{proyecto.tecnologia}}</p>
+      </ion-label>  
+    </ion-item>
+  </ion-list>
+
+
+  <ion-card *ngFor="let post of posts">
+    <ion-card-header id="resaltar">
+      Capitulo: {{post.id}} 
+      <ion-card-title id="resaltado"> 
+        
+        Titulo: {{post.title}} 
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content id="sub"> 
+      {{post.body}}
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

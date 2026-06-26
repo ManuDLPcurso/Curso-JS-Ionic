@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Contacto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">contacto</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+<ion-item>
+  <ion-input [(ngModel)]="nombre" placeholder="Escribe tu Nombre">Nombre</ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-input [(ngModel)]="email" placeholder="Escribe tu Email">Email</ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-textarea [(ngModel)]="mensaje" placeholder="Escribe tu Mensaje">Mensaje</ion-textarea>
+</ion-item>
+
+<ion-button id="boton" (click)="guardar()" expand="full">Mensaje</ion-button>
+
+
+<div ngIf="resultado">
+  <h3>Datos enviados:</h3>
+  <p>Nombre: {{resultado.nombre}}</p>
+  <p>Email: {{resultado.email}}</p>
+  <p>Mensaje: {{resultado.mensaje}}</p>
+</div>
+
+
+</ion-content>
+
+
+
+
