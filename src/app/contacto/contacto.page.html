@@ -27,7 +27,7 @@
 <ion-button id="boton" (click)="guardar()" expand="full">Mensaje</ion-button>
 
 
-<div ngIf="resultado">
+<div *ngIf="resultado">
   <h3>Datos enviados:</h3>
   <p>Nombre: {{resultado.nombre}}</p>
   <p>Email: {{resultado.email}}</p>
